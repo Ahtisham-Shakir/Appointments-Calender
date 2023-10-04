@@ -80,3 +80,14 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+/* ================== Table Head ================= */
+.tableHead {
+  display: flex;
+  justify-content: space-between;
+}
+
+.td {
+  padding: 5px;
+  width: 50px;
+}

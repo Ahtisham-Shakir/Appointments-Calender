@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(true);
 
   useEffect(() => {
     // setLoading(true);
