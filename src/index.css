@@ -1,0 +1,60 @@
+/* ======== CSS Variables ======== */
+:root {
+  --primary: #0aa36e;
+}
+
+/* =========== Login Screen =========== */
+.screen {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  text-align: center;
+  width: 320px;
+  padding: 5px;
+}
+
+.logo img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.inputContiner {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.inputContiner input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid gray;
+  margin-bottom: 10px;
+  padding: 12px;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.inputContiner input:focus {
+  border-bottom: 2px solid var(--primary);
+}
+
+.btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
