@@ -1,3 +1,9 @@
+/* ============== CSS Reset ============ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* ======== CSS Variables ======== */
 :root {
   --primary: #0aa36e;
@@ -57,4 +63,20 @@
 .disabled {
   background-color: gray;
   cursor: not-allowed;
+}
+
+/* ============= Navbar ============= */
+.navContainer {
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+
+.logout {
+  background-color: #ef4444;
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
 }
