@@ -1,51 +1,43 @@
 # ccript_assesment_task
 
 
-A ToDo web application built using React js and Express js that enables users to add and delete their daily tasks to track progress.
+An Appointments Calendar app that fetches the appointments and shows them in a table.
 ## Table of Contents
 
 - [Development](#Development)
-    - [Cloning ToDo](#cloning-Tdo)
+    - [Cloning Appointments-Calender](#cloning-Appointments-Calender)
     - [Prerequisites](#Prerequisites)
     - [Running on Localhost](#Runing-on-Localhost)
 
 ## Development
 
-Todo's  primary features rely on React and Express Js.
+This app is built using React and CSS.
 
 Deployed Link
-          https://ccript-assesment-task.vercel.app
+          https://appointments-calender.vercel.app/
 
 
 ## Environment Setup
 
-Following is the complete procedure to setup and run this project on your local environment.
+Following is the complete procedure to setup and run this project in your local environment.
            
-### Cloning ToDo
+### Cloning Appointments-Calender
 
-Clone Todo App in any project dirctory.
+Clone Appointments-Calender App in any project directory.
 
-            git clone https://github.com/Mask02/ccript_assesment_task.git
+            git clone https://github.com/Ahtisham-Shakir/Appointments-Calender.git
 
 
 ### Prerequisites
 
-You should have to run following command in your Front end and Backend Folder Separetely:
+You should have to run the following command in your project directory:
 
-        
-              npm install
+              yarn install
 
-### Runing on Localhost
+### Running on Localhost
 
-Navigate to Front end directory and run following command and keep it running:
+in the project directory run the following command:
 
-        npm run dev
-        
-Navigate to backend directory and run following command and keep it running:
-
-        npm start
-        
-This will run This Todo App on localhost. Now you can access Todo using url given in your command line.
-
-### Important Note:
-    In your FrontEnd/pages/home.jsx change baseUrl to your server localhost link.
+        yarn dev
+                
+This will run The App on localhost. Now you can access Appointments-Calender using url given in your command line.
