@@ -40,4 +40,4 @@ in the root directory run the following command:
 
         yarn dev
                 
-This will run The App on localhost. Now you can access Todo using url given in your command line.
+This will run The App on localhost. Now you can access Appointments-Calender using url given in your command line.
