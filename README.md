@@ -30,13 +30,13 @@ Clone Appointments-Calender App in any project directory.
 
 ### Prerequisites
 
-You should have to run the following command in your project root directory:
+You should have to run the following command in your project directory:
 
               yarn install
 
 ### Running on Localhost
 
-in the root directory run the following command:
+in the project directory run the following command:
 
         yarn dev
                 
