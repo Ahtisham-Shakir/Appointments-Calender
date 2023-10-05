@@ -20,7 +20,6 @@ const Login = ({ setUser }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         //  saving token in local storage
         localStorage.setItem("token", JSON.stringify(data.token));
         // navigate("/appointments");
