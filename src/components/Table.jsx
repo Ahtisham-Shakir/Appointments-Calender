@@ -4,7 +4,7 @@ import { FiRefreshCw } from "react-icons/fi";
 import Loading from "./Loading";
 import { toast } from "react-toastify";
 
-const Table = ({ user, setUser }) => {
+const Table = ({ setUser }) => {
   const [timeArray, setTimeArray] = useState([]);
   const [mondayArr, setMondayArr] = useState([]);
   const [tuesdayArr, setTuesdayArr] = useState([]);
@@ -19,13 +19,43 @@ const Table = ({ user, setUser }) => {
     fetchAppointments();
   }, []);
 
+  //   function to refresh token
+  const refreshToken = () => {
+    const token = JSON.parse(localStorage.getItem("token"));
+    fetch("https://hiring-test-task.vercel.app/api/refresh-token", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + token,
+      },
+      body: JSON.stringify({ token: token }),
+    })
+      .then((res) => {
+        if (res.status === 401) {
+          localStorage.removeItem("token");
+          setUser(null);
+          toast.error("Unauthorized");
+          throw new Error("Unauthorized");
+        } else {
+          return res.json();
+        }
+      })
+      .then((data) => {
+        localStorage.setItem("token", JSON.stringify(data.newToken));
+        setUser({ token: data.newToken });
+      })
+      .catch((err) => console.log(err));
+  };
+
   //   Function to fetch appointments
   const fetchAppointments = () => {
+    const token = JSON.parse(localStorage.getItem("token"));
+
     setLoading(true);
     fetch("https://hiring-test-task.vercel.app/api/appointments", {
       method: "GET",
       headers: {
-        Authorization: `Bearer ${user.token}`,
+        Authorization: "Bearer " + token,
       },
     })
       .then((res) => {
@@ -39,6 +69,9 @@ const Table = ({ user, setUser }) => {
         }
       })
       .then((data) => {
+        // refreshing the token
+        refreshToken();
+
         // creating time array and final array
         createTimeArray(data);
       })

@@ -2,13 +2,9 @@ import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { toast } from "react-toastify";
 
-import { useNavigate } from "react-router-dom";
-
 const Login = ({ setUser }) => {
   const [loginData, setLoginData] = useState({ username: "", password: "" });
   const [loading, setLoading] = useState(false);
-
-  const navigate = useNavigate();
 
   //   handling login
   const handleLogin = (e) => {

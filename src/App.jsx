@@ -11,10 +11,8 @@ const App = () => {
     // setLoading(true);
     //  checking if token is present in local storage
     const token = JSON.parse(localStorage.getItem("token"));
-    console.log(token, "home");
     if (token) {
       //  if token is present redirecting to home page
-      console.log("home", token);
       setUser({ token });
     }
   }, []);
@@ -30,7 +28,7 @@ const App = () => {
         ) : (
           //  if user is logged in show home page
           <Routes>
-            <Route path="/" element={<Home user={user} setUser={setUser} />} />
+            <Route path="/" element={<Home setUser={setUser} />} />
           </Routes>
         )
       }
