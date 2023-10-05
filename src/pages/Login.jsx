@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { toast } from "react-toastify";
 
-const Login = () => {
+import { useNavigate } from "react-router-dom";
+
+const Login = ({ setUser }) => {
   const [loginData, setLoginData] = useState({ username: "", password: "" });
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   //   handling login
   const handleLogin = (e) => {
@@ -22,7 +26,10 @@ const Login = () => {
       .then((data) => {
         console.log(data);
         //  saving token in local storage
-        // localStorage.setItem("token", JSON.stringify(data.token));
+        localStorage.setItem("token", JSON.stringify(data.token));
+        // navigate("/appointments");
+        setUser({ token: data.token });
+        toast.success("Login Successful");
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));

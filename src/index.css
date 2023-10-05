@@ -45,6 +45,7 @@
 
 .inputContiner input:focus {
   border-bottom: 2px solid var(--primary);
+  box-shadow: 0px 0px 10px rgba(10, 63, 110, 0.5) inset;
 }
 
 .btn {
@@ -53,7 +54,7 @@
   border: none;
   outline: none;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
   margin-top: 10px;
@@ -79,15 +80,54 @@
   padding: 5px;
   border-radius: 8px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ================== Table Head ================= */
+.tableContainer {
+  width: 80vw;
+  margin: 40px auto;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  overflow-x: scroll;
+}
 .tableHead {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .td {
   padding: 5px;
-  width: 50px;
+  width: 125px;
+  height: 60px;
+  border: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.th {
+  font-weight: bold;
+}
+
+/* ========== Single Item =========== */
+.singleCon {
+  background-color: #58c3ffed;
+}
+
+/* ============= Loading ============= */
+.loading {
+  text-align: center;
+  margin-top: 50px;
+  color: var(--primary);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* =============== Reload ============ */
+.reload {
+  color: var(--primary);
+  cursor: pointer;
 }
