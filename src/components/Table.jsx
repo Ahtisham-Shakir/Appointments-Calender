@@ -302,7 +302,6 @@ const Table = ({ setUser }) => {
           <div className="td th">
             <FiRefreshCw
               className="reload"
-              //   color="black"
               size={25}
               onClick={fetchAppointments}
             />{" "}

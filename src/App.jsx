@@ -4,11 +4,9 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 
 const App = () => {
-  const [loading, setLoading] = useState(false);
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // setLoading(true);
     //  checking if token is present in local storage
     const token = JSON.parse(localStorage.getItem("token"));
     if (token) {

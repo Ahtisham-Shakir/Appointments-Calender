@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 import { toast } from "react-toastify";
 
 const Navbar = ({ setUser }) => {
+  // Function to logout and clear token from localstorage
   const logout = () => {
     localStorage.removeItem("token");
     setUser(null);
